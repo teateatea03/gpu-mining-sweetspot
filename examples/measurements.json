@@ -1,0 +1,1272 @@
+{
+  "scope": "Redacted numeric summaries from a local short-test case study; not raw logs or a global optimum.",
+  "trials": [
+    {
+      "label": "3080ti-01-baseline-c1650-m405-o200",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 5,
+          "hashrate_hs": 132796000000000.0,
+          "watts": 194.8298587118242,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 306.9,
+      "warmup_s": 120
+    },
+    {
+      "label": "3080ti-02-memory-c1650-m810-o200",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 7,
+          "rate_windows": 3,
+          "hashrate_hs": 133206666666666.67,
+          "watts": 201.0580105627484,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 200,
+            "memory_mhz": 810,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-03-memory-c1650-m5001-o200",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 2,
+          "rate_windows": 3,
+          "hashrate_hs": 134020000000000.02,
+          "watts": 233.2185288011161,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 200,
+            "memory_mhz": 5001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 5001.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-04-core-c1350-m405-o200",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 2,
+          "rate_windows": 3,
+          "hashrate_hs": 108930000000000.0,
+          "watts": 149.72244155654423,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1350,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1350.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.1,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-05-core-c1050-m405-o200",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 1,
+          "rate_windows": 3,
+          "hashrate_hs": 84903333333333.34,
+          "watts": 119.43334862914547,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1050,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1050.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-06-core-c1500-m405-o200",
+      "valid": false,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": false,
+          "controls_verified": true,
+          "owner_accepted": 0,
+          "rate_windows": 3,
+          "hashrate_hs": 121010000000000.0,
+          "watts": 164.32034489900664,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1500.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.3,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-07-offset-c1650-m405-o250",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 132886666666666.66,
+          "watts": 185.79951103607752,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 250,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-08-offset-c1650-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 132756666666666.66,
+          "watts": 181.65623867069215,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-13-validation-baseline-A1",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 2,
+          "rate_windows": 4,
+          "hashrate_hs": 132815000000000.0,
+          "watts": 195.27718983905444,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 246.2,
+      "warmup_s": 90
+    },
+    {
+      "label": "3080ti-14-validation-retained-speed-B",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 6,
+          "rate_windows": 6,
+          "hashrate_hs": 132788333333333.36,
+          "watts": 182.32181742457635,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 362.7,
+      "warmup_s": 120
+    },
+    {
+      "label": "3080ti-15-combo-c1350-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 108823333333333.34,
+          "watts": 149.32663725519603,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1350,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1350.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-16-combo-c1500-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 4,
+          "rate_windows": 3,
+          "hashrate_hs": 120833333333333.33,
+          "watts": 164.46298406038758,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1500.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-17-cap-c1650-m405-o300-p220",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 3,
+          "hashrate_hs": 132763333333333.33,
+          "watts": 182.32429921018752,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 220
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.3,
+      "warmup_s": 60
+    },
+    {
+      "label": "3080ti-18-validation-baseline-A2",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 4,
+          "hashrate_hs": 132840000000000.0,
+          "watts": 198.36961584025755,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1650,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1650.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 246.0,
+      "warmup_s": 90
+    },
+    {
+      "label": "3080ti-19-validation-efficient-C",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "3080ti": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 4,
+          "rate_windows": 6,
+          "hashrate_hs": 120805000000000.0,
+          "watts": 164.10756172136726,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 200,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1500.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 306.9,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-01b-baseline-c2610-m14801-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [
+        "share rejected [job expired or belongs to another connection] [pearlhash][0]"
+      ],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 8,
+          "rate_windows": 5,
+          "hashrate_hs": 217556000000000.0,
+          "watts": 207.68142857142857,
+          "power_method": "sampled-power",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2600.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 367.5,
+      "warmup_s": 150
+    },
+    {
+      "label": "5080-02b-memory-c2610-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 9,
+          "rate_windows": 4,
+          "hashrate_hs": 208557500000000.0,
+          "watts": 195.551,
+          "power_method": "sampled-power",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2598.0333333333333,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 246.2,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-03-memory-c2610-m810-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [
+        "share rejected [job expired or belongs to another connection] [pearlhash][0]"
+      ],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 6,
+          "rate_windows": 4,
+          "hashrate_hs": 201902500000000.0,
+          "watts": 191.74733333333333,
+          "power_method": "sampled-power",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 810,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2596.633333333333,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 245.8,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-04-memory-c2610-m7001-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 4,
+          "rate_windows": 4,
+          "hashrate_hs": 212325000000000.0,
+          "watts": 202.25133333333332,
+          "power_method": "sampled-power",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2598.733333333333,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 245.8,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-05-core-c2100-m14801-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 164863333333333.34,
+          "watts": 129.26028602099387,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2100,
+            "core_offset_mhz": 300,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2070.25,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-06-core-c2100-m7001-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 2,
+          "rate_windows": 3,
+          "hashrate_hs": 162706666666666.66,
+          "watts": 126.32748785093348,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2100,
+            "core_offset_mhz": 300,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2070.0,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.4,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-07b-recheck-c2100-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 112203333333333.33,
+          "watts": 97.07925543706185,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2100,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2065.2727272727275,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-07c-bridge-c2100-m810-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 2,
+          "rate_windows": 3,
+          "hashrate_hs": 146410000000000.0,
+          "watts": 116.16828924510274,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2100,
+            "core_offset_mhz": 300,
+            "memory_mhz": 810,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2069.304347826087,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-07d-recheck-c2610-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 3,
+          "hashrate_hs": 181546666666666.66,
+          "watts": 167.7948950711646,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2595.0,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.6,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-08-core-c1500-m405-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 104306666666666.66,
+          "watts": 86.27308592252243,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 300,
+            "memory_mhz": 405,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1492.3333333333333,
+          "actual_memory_mhz": 405.0
+        }
+      },
+      "duration_s": 185.5,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-09-core-c1500-m7001-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 120266666666666.67,
+          "watts": 98.34332213909417,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 300,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1492.0,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.1,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-10-core-c1500-m14801-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 4,
+          "rate_windows": 3,
+          "hashrate_hs": 120016666666666.67,
+          "watts": 100.10867876089375,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1500,
+            "core_offset_mhz": 300,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1492.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-11-refine-c1800-m7001-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 4,
+          "rate_windows": 3,
+          "hashrate_hs": 145646666666666.7,
+          "watts": 111.85743588929687,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 1800,
+            "core_offset_mhz": 300,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 1792.0,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.4,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-12-refine-c2250-m7001-o300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 182773333333333.34,
+          "watts": 138.8358607088664,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 300,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2238.2083333333335,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.5,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-13-offset-c2610-m14801-o350",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 212393333333333.34,
+          "watts": 195.02863155802345,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 350,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2602.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-14-offset-c2610-m14801-o400",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 214416666666666.66,
+          "watts": 191.76311568433496,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 400,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2601.7083333333335,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.1,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-15-offset-c2610-m14801-o450",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 6,
+          "rate_windows": 3,
+          "hashrate_hs": 213520000000000.0,
+          "watts": 184.24224909311803,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 450,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2602.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.1,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-16-combo-c2250-m7001-o400",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 3,
+          "hashrate_hs": 180163333333333.3,
+          "watts": 133.2106330662656,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 400,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2204.6666666666665,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.3,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-17-combo-c2250-m7001-o450",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 182043333333333.3,
+          "watts": 135.94306447906166,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 450,
+            "memory_mhz": 7001,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2220.0,
+          "actual_memory_mhz": 7001.0
+        }
+      },
+      "duration_s": 185.2,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-18-combo-c2250-m810-o450",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 178176666666666.7,
+          "watts": 130.3785700657165,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 450,
+            "memory_mhz": 810,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2219.6666666666665,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 185.6,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-19-speed-c2700-m14801-o450",
+      "valid": false,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": false,
+          "controls_verified": true,
+          "owner_accepted": 0,
+          "rate_windows": 3,
+          "hashrate_hs": 226523333333333.34,
+          "watts": 205.98616713340067,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2700,
+            "core_offset_mhz": 450,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2692.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 185.0,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-20-cap-c2700-m14801-o450-p300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [
+        "share rejected [job expired or belongs to another connection] [pearlhash][0]"
+      ],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 6,
+          "hashrate_hs": 226278333333333.34,
+          "watts": 203.03054382394083,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2700,
+            "core_offset_mhz": 450,
+            "memory_mhz": 14801,
+            "power_limit_w": 300
+          },
+          "actual_core_mhz": 2692.0,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 306.9,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-21-cap-c2250-m810-o450-p300",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 3,
+          "rate_windows": 3,
+          "hashrate_hs": 181380000000000.0,
+          "watts": 132.67012521725377,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 450,
+            "memory_mhz": 810,
+            "power_limit_w": 300
+          },
+          "actual_core_mhz": 2220.0,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 185.4,
+      "warmup_s": 60
+    },
+    {
+      "label": "5080-22-validation-baseline-A1",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 12,
+          "rate_windows": 4,
+          "hashrate_hs": 218450000000000.0,
+          "watts": 200.81718549224533,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2598.733333333333,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 245.8,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-23-validation-retained-speed-B",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 8,
+          "rate_windows": 6,
+          "hashrate_hs": 221226666666666.66,
+          "watts": 191.04505175851745,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2640,
+            "core_offset_mhz": 450,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2631.404255319149,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 362.4,
+      "warmup_s": 120
+    },
+    {
+      "label": "5080-24-validation-baseline-A2",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 5,
+          "rate_windows": 4,
+          "hashrate_hs": 218545000000000.0,
+          "watts": 201.83016823385165,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2610,
+            "core_offset_mhz": 300,
+            "memory_mhz": 14801,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2601.0666666666666,
+          "actual_memory_mhz": 14801.0
+        }
+      },
+      "duration_s": 245.8,
+      "warmup_s": 90
+    },
+    {
+      "label": "5080-25-validation-efficient-C",
+      "valid": true,
+      "graceful": true,
+      "restored": true,
+      "fatal": [],
+      "invalid_rejected": [],
+      "rejected": [],
+      "gpus": {
+        "5080": {
+          "valid": true,
+          "controls_verified": true,
+          "owner_accepted": 6,
+          "rate_windows": 6,
+          "hashrate_hs": 182528333333333.34,
+          "watts": 132.74729198554633,
+          "power_method": "nvml-energy",
+          "settings": {
+            "core_mhz": 2250,
+            "core_offset_mhz": 450,
+            "memory_mhz": 810,
+            "power_limit_w": 250
+          },
+          "actual_core_mhz": 2220.0,
+          "actual_memory_mhz": 810.0
+        }
+      },
+      "duration_s": 306.7,
+      "warmup_s": 90
+    }
+  ],
+  "aborted_or_faulted_points": 4
+}

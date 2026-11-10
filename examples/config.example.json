@@ -1,0 +1,20 @@
+{
+  "executable": "REPLACE_WITH_ABSOLUTE_SRB_PATH",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "algorithm": "pearlhash",
+  "pool": "REPLACE_WITH_POOL_HOST:PORT",
+  "wallet": "REPLACE_WITH_VALID_WALLET",
+  "worker": "sweetspot-test",
+  "tls": true,
+  "power_method": "nvml-energy",
+  "initial_clock_locks": "known-unlocked",
+  "max_temperature_c": 80,
+  "max_private_mib": 2048,
+  "devices": [
+    {
+      "uuid": "GPU-REPLACE-WITH-REAL-UUID",
+      "pci": "00000000:01:00.0",
+      "miner_id": 0
+    }
+  ]
+}

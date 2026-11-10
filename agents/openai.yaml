@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPU Mining Sweet Spot"
+  short_description: "Measure and validate mining hashrate per watt"
+  default_prompt: "Use $gpu-mining-sweetspot to find and validate my GPUs' best measured hashrate per watt."

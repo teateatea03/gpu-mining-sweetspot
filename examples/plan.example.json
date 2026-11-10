@@ -1,0 +1,18 @@
+[
+  {
+    "label": "A1",
+    "duration_s": 900,
+    "warmup_s": 150,
+    "rate_window_guard_s": 90,
+    "minimum_rate_windows": 8,
+    "settings": [
+      {
+        "uuid": "GPU-REPLACE-WITH-REAL-UUID",
+        "core_mhz": 1500,
+        "core_offset_mhz": 0,
+        "memory_mhz": 5000,
+        "power_limit_w": 200
+      }
+    ]
+  }
+]
