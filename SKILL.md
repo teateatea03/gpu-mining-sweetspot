@@ -22,6 +22,7 @@ Produce a measured tradeoff curve for each physical card, then validate the sele
 ## Read only the relevant material
 
 - **Design an experiment or choose a point:** [protocol.md](references/protocol.md), including the core-first/VRAM-first alternatives, V/F behavior, PL sweep and A1/B/A2 comparison.
+- **Preserve maximum demonstrated speed while reducing watts:** [speed-retention.md](references/speed-retention.md), covering fixed-clock offset screens, actual clock-bin retention, PL steps, AUTO fan revalidation and the limits of the later dual-card case.
 - **Use the bundled Windows runner:** [srb-windows.md](references/srb-windows.md) before any `--run`. It is a basic harness, not the complete daily controller described in the case study. Its coarse idle check, core-temperature-only limit and strict clock tolerance may make it unsuitable for a particular plan; adapt and calibrate first rather than bypassing a guard.
 - **Diagnose Windows idle, permissions, thermal sensors, signals or desktop deployment:** [windows-operations.md](references/windows-operations.md).
 - **Classify a disconnect, rejection, RAM increase or crash:** [failure-triage.md](references/failure-triage.md).

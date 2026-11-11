@@ -7,6 +7,12 @@
 - Offline compile, schema/command validation and anonymous export are exercised. Skill metadata, local document links, secret scanning and source-identifier checks are part of the publication check. CI runs compilation, unittests, schema/command validation and fixture analysis on Linux without GPUs.
 - This update changes documentation and offline evidence/analysis code. It does not start, stop, reconfigure or test the live miner. The operating miner and private daily controller are outside the publication checkout.
 
+## Later speed-retention documentation
+
+The speed-retention reference and numeric capsule document a separate private 23-case round (20 passes and three nonpasses), culminating in a nominal 30-minute AUTO dual run. Each card supplied18 unique rate windows and300 warmed native clock/AUTO samples. The final run had owner proof, no rejects/HW or new relevant driver events, and normal stop/restoration. Failed, interrupted and drifting comparisons remain explicit. Public aggregate values are a whitelist export of private observations, not a reproducible raw-log audit; no preset, global optimum, controlled before/after gain or overnight claim follows.
+
+This publication changes documentation and an offline numeric capsule only. It performs no live GPU control and adds no controller capability to released scripts. Deterministic checks for this revision are recorded with the publication result; independent model-forward behavior remains unmeasured.
+
 ## Hardware evidence boundaries
 
 The initial case used real per-card experiments, owner-pool submissions and cleanup, followed by short combined checks. Those runs validate their historical observations, not endurance at every similar setting.

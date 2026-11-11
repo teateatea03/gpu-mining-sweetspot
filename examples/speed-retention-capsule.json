@@ -1,0 +1,69 @@
+{
+  "format": "public-evidence-capsule-v1",
+  "label": "speed-retention-auto-dual",
+  "evidence_scope": "endurance",
+  "power_scope": "gpu",
+  "power_method": "nvml-cumulative-energy",
+  "observed_seconds": null,
+  "nominal_seconds": 1800,
+  "input_declares_valid": true,
+  "graceful": true,
+  "restored": true,
+  "performance_comparison_valid": false,
+  "driver_event_count": 0,
+  "gpus": {
+    "gpu-1": {
+      "settings": {
+        "core_mhz": 1770,
+        "core_offset_mhz": 200,
+        "memory_mhz": 405,
+        "memory_offset_mhz": 0,
+        "power_limit_w": 260
+      },
+      "hashrate_hs": 142238888888888.88,
+      "watts": 252.120675,
+      "actual_core_mhz": 1770.0,
+      "actual_memory_mhz": 405.0,
+      "power_method": "nvml-cumulative-energy",
+      "sampled_watts": 255.216509,
+      "owner_accepted": 29,
+      "rate_windows": 18,
+      "native_auto_samples": 300,
+      "all_auto": true,
+      "max_core_c": 75.875,
+      "max_hotspot_c": 85.78125,
+      "max_memory_junction_c": 72.0,
+      "hw": 0,
+      "pool_wait_observed": null
+    },
+    "gpu-2": {
+      "settings": {
+        "core_mhz": 3000,
+        "core_offset_mhz": 450,
+        "memory_mhz": 14801,
+        "memory_offset_mhz": 0,
+        "power_limit_w": 295
+      },
+      "hashrate_hs": 253993333333333.34,
+      "watts": 288.157456,
+      "actual_core_mhz": 2992.0,
+      "actual_memory_mhz": 14801.0,
+      "power_method": "nvml-cumulative-energy",
+      "sampled_watts": 291.892862,
+      "owner_accepted": 34,
+      "rate_windows": 18,
+      "native_auto_samples": 300,
+      "all_auto": true,
+      "max_core_c": 70.808594,
+      "max_hotspot_c": null,
+      "max_memory_junction_c": 62.0,
+      "hw": 0,
+      "pool_wait_observed": null
+    }
+  },
+  "limitations": [
+    "Input assertions are not an independent raw-log audit.",
+    "Anonymous capsule is not a deployment preset or analyzer input.",
+    "Review the exact output before publishing; raw private logs are omitted."
+  ]
+}

@@ -56,6 +56,10 @@ Choose memory-first or core-first based on algorithm sensitivity and the user's 
 
 A PL below previously observed wattage can retain nearly the same hash, but measure it. The allowed minimum PL and actual consumption differ; locking frequency may keep consumption below that minimum limit. Do not invent a 250 W operating budget because an example uses it. Distinguish expected PL throttling from a failed setter: a ceiling may legitimately reduce actual clock. Declare accepted readback semantics before the sweep. The bundled runner's strict clock tolerance is not an adapter for every throttling experiment.
 
+## Speed-first selection at fixed clocks
+
+When speed takes priority, use the [speed-retention branch and measured case](speed-retention.md). Screen core offsets with a fixed supported clock/memory combination, then reduce PL while observing hash uncertainty and the full warmed clock distribution. Freeze the speed criterion before confirmation. A lower power ceiling is not necessarily lower consumption, and retaining a clock bin alone does not establish identical throughput. Revalidate the combination under its daily fan policy; preserve hardware-valid runs that lose clock retention as separate outcomes. Do not turn close means under drifting desktop load into a controlled efficiency claim.
+
 ## Algorithm and environment matrix
 
 Keep coin algorithm, miner/kernel version, GPU architecture, memory type/capacity, driver, display role and thermal policy together in each comparison. An ETH bandwidth optimization, RVN compute optimization, synthetic GEMM result or another miner's benchmark does not establish a PearlHash improvement.
