@@ -1,4 +1,6 @@
-# Originating PearlHash experiment
+# Initial PearlHash screening (historical)
+
+**Later qualification:** Read [the endurance/deployment follow-up](case-followup.md) before using these short results as deployment evidence. The observations below describe the initial session, not the current profile.
 
 Measured on 2026-11-10 using SRBMiner 3.8.6, NVIDIA driver 621.01, one RTX 5080 and one RTX 3080 Ti. The user requested controlled per-card research, followed by maximum validated hashrate per GPU watt. This is a local case study, not universal clock recommendations or a full reproducibility archive. Private raw logs, wallets, UUIDs, network addresses and host paths are not published. `examples/measurements.json` contains normalized, redacted numeric summaries for the offline analyzer.
 
@@ -29,7 +31,7 @@ All 42 completed screening points remain in the redacted dataset, including scre
 - A ten-minute dual run stopped/restored normally and had owner proof but only seven warmed report windows per card against the planned eight. It remained coverage-incomplete. A separate bounded eight-minute run with a 90-second warmup met the eight-window criterion; the original was not relabeled valid.
 - Minimum memory was not universally best on 5080; memory states changed P-state and actual core. The efficient 2250 MHz request actually averaged about 2220 MHz. Voltage and VRAM junction temperature were unavailable.
 
-## Dual results and chosen objective
+## Initial-session dual results and chosen objective
 
 The retained-speed B combination passed its supplemental validation at 354.19 TH/s / 378.18 W GPU energy average, 13 owner accepted, zero rejects/HW. The user's final objective was highest T/W, so the C combination was separately validated and deployed:
 
@@ -41,4 +43,4 @@ The retained-speed B combination passed its supplemental validation at 354.19 TH
 
 This eight-minute dual validation had eight warmed windows per card, 11 owner accepted, zero rejects/HW, no new fatal errors, graceful stop and verified restoration. Combined efficiency improved about 7.8% over the retained-speed dual run. This is the ratio of combined hashrate to summed GPU watts, not the sum/average of the individual efficiency ratios.
 
-The original launcher/shortcut/guard chain was backed up, three parameter sources updated and effective commands checked without starting mining again. Mining finished stopped, locks reset, offsets read back as zero and original PL restored. Short tests do not prove endurance, fix a historical RAM accumulation issue or establish whole-PC electricity cost. Different measurement methods are explicitly separated.
+At the end of that initial session, the original launcher/shortcut/guard chain was backed up, three parameter sources updated and effective commands checked without starting mining again. Mining finished stopped, locks reset, offsets read back as zero and original PL restored. Short tests do not prove endurance, fix a historical RAM accumulation issue or establish whole-PC electricity cost. Different measurement methods are explicitly separated.

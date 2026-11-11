@@ -1,15 +1,24 @@
 # Validation and limits
 
-Validated locally on 2026-11-10 with Python 3.12 on native Windows.
+## 2026-11-11 publication update
 
-- Sixteen deterministic unittest scenarios pass. They cover fatal errors without rate rows, both output streams, stale versus invalid rejects, unit/timestamp normalization, per-device vector ordering, idle waiting without process mutation, owner-proof gating, restoration failure, forced-stop classification, unconditional cleanup on trial exceptions, the eight-window coverage gate, A-B-A arithmetic and power-method separation.
-- The bundled offline analyzer runs on the 42 redacted completed screening summaries: 40 owner-proven rows are included and two owner-unproven rows excluded, across three GPU/power-method groups. Failed or aborted runs are recorded separately, not represented as successful rows.
-- The refactored NVML adapter performed a read-only probe on both local cards, reading offsets, energy counters and telemetry. The actual default CLI also passed read-only binary/hash/device-ID preflight for both cards without starting mining. A native Python sleeper child exercised the actual Windows Job Object, process-memory reader and graceful owned stop. That smoke test changed no GPU controls and started no miner.
-- Skill frontmatter and invocation YAML are parsed and the maintained skill-creator validator is run. Local reference links are checked. The public working tree is scanned with Gitleaks through qtools, plus a targeted privacy check for the source machine's identifiers.
-- CI is configured for offline compilation, unittest, schema/command validation and fixture analysis on Linux. CI performs no GPU operations.
+- Twenty-five deterministic unittest scenarios pass with Python 3.12 on native Windows. The original sixteen scenarios remain; nine added cases cover whitelist privacy, missing/non-Boolean assertions, nonfinite/Boolean numbers, capsule/ranking separation, explicit non-comparability, GPU-versus-wall grouping, paired scope mismatches and the offline exporter CLI.
+- The original 42 screening summaries still produce 40 included and two excluded rows across three GPU/power-method/scope groups. Short screening rankings do not approve deployment. The anonymous endurance capsule is a separate evidence format, not ranking input.
+- Offline compile, schema/command validation and anonymous export are exercised. Skill metadata, local document links, secret scanning and source-identifier checks are part of the publication check. CI runs compilation, unittests, schema/command validation and fixture analysis on Linux without GPUs.
+- This update changes documentation and offline evidence/analysis code. It does not start, stop, reconfigure or test the live miner. The operating miner and private daily controller are outside the publication checkout.
 
-The originating real mining runs validate the case study's local measurements and original control implementation. The standalone refactoring has not been re-run through a complete live mining sweep; it needs a short, authorized stop/restore calibration on a new target before long experiments. A deterministic pass does not establish AI decision quality, cross-driver compatibility or endurance.
+## Hardware evidence boundaries
 
-Manual skill-routing scenarios were reviewed against the instructions: a highest-T/W request keeps lower-hash efficient points; a GPU busy with user work leads to waiting without killing applications; a research-only request does not start mining; missing card mapping or unreadable restoration state blocks mutation while offline preparation continues. These are instruction reviews, not an independent model forward-test or Promptfoo quality evaluation. No additional paid model/provider evaluation was run.
+The initial case used real per-card experiments, owner-pool submissions and cleanup, followed by short combined checks. Those runs validate their historical observations, not endurance at every similar setting.
 
-Private raw hardware evidence and deployment backups remain with the originating user. Published numeric summaries are redacted; readers cannot independently audit every underlying raw log from this repository alone. No wallet, internal address, private host path or hardware UUID is needed to use the skill.
+The later private controller completed a nominal one-hour recovery validation with 3592.94 seconds of mining observation, one miner generation, native AUTO fan evidence, no rejects/HW/fatal errors or new relevant System driver events, and normal stop/restoration. It also verified actual foreground deployment and a desktop-token metadata difference. Its sensors, process classifier, fan control and launcher logic are documented in the follow-up; they are not thereby implemented or live-tested in the bundled basic runner.
+
+The bundled refactoring's prior coverage included native read-only NVML offsets/energy/device preflight and CPU-only owned-child lifecycle smoke. It has not been run through a new complete live sweep for this publication. Calibrate a target-specific short stop/restore path before authorizing long experiments. Its coarse all-GPU readiness rule, core-temperature-only check, missing fan controller, strict clock tolerance and partial same-GPU competing-work detection remain explicit limitations. Do not bypass those limitations by relabeling output or claiming private controller coverage applies to this code.
+
+Private raw logs and deployment backups remain with the originating user. The public capsule preserves selected numeric fields and input assertions, not an independently reproducible raw-log audit. Nothing establishes a universal optimum, cross-driver equivalence, a fixed voltage from an offset, an unreadable junction temperature, whole-PC power, overnight memory behavior or profitability.
+
+## Behavior evaluation
+
+Instruction review and deterministic script tests are different from model-forward testing. Any independent scenario pass for this update is recorded separately with scope and limitations; it is not a paid-provider quality benchmark or evidence of live hardware control. See the entrypoint's capability matrix when choosing an adapter.
+
+An independent reviewer attempt returned partial source-based scenario observations, but an evaluator tool path-authority restriction prevented completing the review. Those observations are not publication clearance or a completed independent forward-test. Model behavior remains unmeasured beyond the stated manual/partial inspection.

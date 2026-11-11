@@ -1,35 +1,37 @@
 # GPU Mining Sweet Spot — reusable AI skill
 
-Find the highest **measured hashrate per watt**, with per-card experiments, algorithm-aware clock/memory sweeps, pool proof and reversible control. The skill is in [SKILL.md](SKILL.md); an AI can read that file and load only the relevant references.
+Find a GPU's measured speed/power tradeoff, validate the chosen operating point, and check the real deployment path. Start with [SKILL.md](SKILL.md). [繁體中文](#繁體中文)
 
-[繁體中文說明](#繁體中文)
+## Method library
 
-## What is included
+- Algorithm-aware core/VRAM order, V/F behavior, combinations, PL reduction, per-card data and A1/B/A2 comparisons: [protocol](references/protocol.md).
+- Windows desktop versus compute activity, adapter identity, token privilege differences, fan/thermal coverage, owned stop and actual shortcut validation: [Windows operations](references/windows-operations.md).
+- CUDA/HW versus pool waits, stale versus invalid work, RAM growth and bounded recycling: [failure triage](references/failure-triage.md).
+- RTX2060 variants, unreadable junction telemetry and Linux lifecycle/control differences: [Linux/Turing](references/linux-turing.md).
+- Historical measurements, including later failures after short passes: [initial study](references/case-study.md), [endurance follow-up](references/case-followup.md), [source bibliography](references/research-sources.md).
+- Publishing anonymous evidence with limits intact: [publication guide](references/evidence-publication.md).
 
-- A finite experimental protocol: memory states, core levels, offset combinations, power ceilings, A1/B/A2 comparisons and final multi-GPU validation.
-- A Windows NVIDIA/SRBMiner adapter with read-only defaults, idle waiting, UUID/PCI/device-ID checks, energy counters, fatal-log checks and owned-child cleanup.
-- A portable offline analyzer for T/W, full tradeoff curves, Pareto frontiers and paired comparisons; different power methods are kept separate.
-- A redacted PearlHash case study, 42 numeric screening summaries, and regressions for faults that actually occurred.
+## Implemented tools and limits
 
-The selected objective matters: maximum T/W can sacrifice hashrate. This project does not promise a universal optimum, 24-hour stability, whole-PC watts or profitability. It ships no miner binaries or preset applicable to every GPU. Other miners/vendors/operating systems need a calibrated adapter; the bundled live adapter targets native Windows/NVIDIA/SRBMiner.
+The repository includes a basic Windows NVIDIA/SRBMiner experiment harness, portable offline analysis, synthetic regressions, 42 historical screening summaries and an anonymous endurance capsule. The private daily controller's advanced PID/LUID, per-board junction/hotspot, AUTO fan and foreground controls are documented techniques; they are **not all implemented by the bundled harness**. Read its [capability boundary](references/srb-windows.md) before using it.
+
+Highest T/W can reduce hash rate. Maximum speed, lowest watts and profit are different objectives. This project offers no universal preset, global optimum or overnight stability claim, ships no miner binary, and does not modify antivirus, BIOS or drivers. GPU power is not wall power.
 
 ## Use as a skill
-
-Clone this repository, then point your AI at `SKILL.md`:
 
 ```text
 git clone https://github.com/teateatea03/gpu-mining-sweetspot.git
 ```
 
-For Codex, copy the repository files into the user skill directory under `gpu-mining-sweetspot` (normally `~/.codex/skills/gpu-mining-sweetspot`), then start a new chat and invoke `$gpu-mining-sweetspot`. Other skill-capable agents can install the same `SKILL.md`, scripts and references using their own skill mechanism. Reading a skill does not itself authorize mining or changing another machine.
+For Codex, install the repository under `~/.codex/skills/gpu-mining-sweetspot`, start a new chat and invoke `$gpu-mining-sweetspot`. Other skill-capable agents can read `SKILL.md` and use their own installation mechanism. Installation alone authorizes no hardware operations.
 
-Example request:
+Example:
 
-> Use this skill to find my GPUs' highest validated hashrate per watt. Wait while a GPU is busy, test each card separately, then validate the combination. Keep the original launchers until deployment is authorized and finish mining stopped.
+> Use this skill to measure my GPUs' speed/power curve. My objective is highest T/W. Wait while a selected card has competing work, test cards separately, then validate the combination. Reuse my existing experiment authorization and preserve other applications. Report the tradeoff, actual launch validation and any remaining uncertainty.
 
-## Offline demonstration
+## Offline checks
 
-Python 3.10+; no pip packages required by the bundled scripts:
+Python 3.10+, standard-library tools:
 
 ```text
 python -m unittest discover -s tests -v
@@ -37,20 +39,20 @@ python scripts/analyze.py --input examples/measurements.json --output analysis/d
 python scripts/sweetspot.py --config examples/config.example.json --plan examples/plan.example.json --validate-only
 ```
 
-These commands do not start mining or change GPU controls. The example live configuration contains placeholders; its clock values are schema illustrations. Read [the Windows adapter reference](references/srb-windows.md) before any `--run`. Keep filled configurations and raw run artifacts private. Only the user's explicit task authorizes live hardware experiments; no startup service or permanent monitoring is installed.
+These commands start no miner. Live configurations contain placeholders. Keep filled configs and raw logs private. See [validation notes](VALIDATION.md) for deterministic, historical hardware and model-testing coverage. The exporter preserves only approved numeric fields; review the exact output before publication. The endurance capsule is evidence for readers, not analyzer input or a preset.
 
-## Evidence
+## What the latest case established
 
-The [case study](references/case-study.md) explains the method's actual results and failures. The final efficiency-priority combination measured **302.35 TH/s at 299.34 W of summed GPU energy-counter power**, approximately **1.010 TH/s/W**, over eight minutes, with 11 owner accepted / 0 rejected / 0 HW. These are short local measurements on an RTX 5080 and RTX 3080 Ti. The same requested clocks need not produce the same actual clocks or efficiency on another card.
+The initial eight-minute efficiency screening measured 302.35 TH/s at 299.34 GPU W. Later work demonstrated that short passes can fail after deployment. A separate conservative recovery profile completed a nominal one-hour validation: 335.284 TH/s at 503.677 GPU energy-counter W, owner accepted 49/92, no rejects/HW/fatal errors or new relevant driver events, and normal stop/restoration.
 
-[Validation notes](VALIDATION.md) distinguish historical live experiments, deterministic tests, read-only probing and refactored live-runner coverage. [MIT license](LICENSE).
+These results used different operating points and conditions. The later run retained desktop activity and is explicitly non-comparable for controlled ranking. It establishes a recovery operating point, **not a new maximum-T/W result**. Higher-efficiency retuning remains separate. See the follow-up for exact exposure and limitations.
 
 ## 繁體中文
 
-這套技能讓 AI 尋找顯卡挖礦的 **T/W 甜蜜點（算力 ÷ 功耗）**。每張卡先分開測試，再驗證雙卡組合；會等待使用中的顯卡，不會關閉你的工作程式。
+這套技能整理如何找出「算力／耗電」甜蜜點，也保留高算力優先時的取捨。流程包括：辨認演算法瓶頸、原廠與現有參數對照、核心與顯存分別掃描、組合驗證、逐步降低PL、A1/B/A2對照、雙卡長測，以及真正桌面捷徑的啟動、停止與還原驗證。
 
-核心流程包含辨認演算法瓶頸、比較顯存檔位、掃描核心、組合核心偏移與功耗上限、原設定前後對照、礦池接受確認，以及停止後還原。完整曲線會保留，失敗點也不隱藏。ETH 時期的調校方法可以參考，參數不能直接照抄到別的演算法。
+新增內容包含桌面繪圖造成的忙碌誤判、管理員啟動路徑仍可能有權限差異、不同顯卡的溫度與感測器限制、礦池斷線與無效計算的區分、RAM成長觀測，以及失敗點與短測結果如何正確保留。ETH／RVN經驗用來學方法，參數不能直接套到珍珠幣或其他架構。
 
-把整個資料夾安裝成技能後，在新對話使用 `$gpu-mining-sweetspot`。其他 AI 也可以從 `SKILL.md` 開始讀。單純閱讀或安裝技能不會啟動挖礦；實際測試需要使用者授權，並依目標硬體校準停止及還原機制。
+公開版明確區分「已實作工具」與「需要自行校準的進階控制流程」。提供匿名的一小時驗證數據，不含錢包、內網位址、硬體識別與私人路徑；保守恢復檔也不會被說成最高T/W。日常風扇AUTO必須另驗證，短測通過與HW=0都不等於長期穩定。
 
-功耗以 GPU 能耗計或明確標示的取樣值計算，**不是整機插座功耗**。短測不等於長期穩定、全域最佳或獲利保證。案例參數只作研究證據，不能視為所有同型號顯卡的預設值。
+[MIT license](LICENSE)

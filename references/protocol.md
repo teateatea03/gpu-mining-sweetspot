@@ -18,7 +18,7 @@ Core offset with a locked target can change voltage/frequency behavior. An offse
 
 1. Freeze binary/hash, driver, pool, algorithm and comparable background workload. Map each physical card to its miner ID. Calibrate telemetry and an explicit stop/restore path.
 2. Measure the existing profile as a reference. Distinguish an existing tuned profile from factory automatic Boost. If a factory comparison is requested, measure it separately.
-3. Run coarse supported memory states, then coarse core levels. Keep other dimensions fixed within each comparison; keep files separated by physical GPU.
+3. Run coarse supported core/memory probes in the algorithm-appropriate or user-requested order. Core-first and memory-first are both useful designs. Keep other dimensions fixed within each comparison and files separated by physical GPU.
 4. Combine promising core/memory/offset values. Use finer increments only where observed differences exceed noise and the hardware actually supports them. Check PL separately: a 250 W ceiling does not mean a card consumes 250 W.
 5. Re-run finalists longer with owner-pool proof. Bracket the candidate as A1 -> B -> A2 with the same binary, power method and background conditions. Average the two reference measurements for the baseline. Compare efficiency against `mean(reference hash) / mean(reference watts)`; report exposure and variation.
 6. Validate selected profiles together after singles. Shared cooling, PSU, CPU/prover, work supply and background applications can change the result. Do not call the sum of two separate single-card measurements a measured dual result.
@@ -41,3 +41,25 @@ Rank only comparable, valid points. Keep different power methods/scopes in separ
 Confirm the preferred point with repeated/longer exposure proportional to the user's intended use. Similar cards can have different silicon, cooling and memory. Do not claim a unique global optimum, 24-hour stability or the miner's secret optimization from a short local curve. If a run misses a predeclared coverage criterion, keep it incomplete, explain why, and design at most a bounded follow-up from the observed cadence. Do not relabel it as passed by weakening the criterion.
 
 Deployment is a separate evidence step: back up the actual source BAT/config and shortcuts, resolve guard indirection, verify per-GPU vector ordering, keep wallet/pool/thermal/RAM guards, and use a check-only path to prove effective commands without starting mining. Restore and leave stopped unless continuing mining was requested.
+
+## Core-first search and power reduction
+
+A useful sequence from RVN-era practice is:
+
+1. Hold VRAM and PL fixed, increase the chosen core control in small supported steps (15 MHz was one operator's step). Record whether it is an absolute lock, Boost offset or a V/F-curve adjustment. Stop at an error or predeclared limit; a deliberate crash is not required to find a useful point.
+2. Return to a conservative lower point. A 30 MHz backoff was that operator's starting margin, not a stability guarantee.
+3. Restore the reference core setting; sweep VRAM independently (100 MHz requested increments were an example). Following a fault, a 200-300 MHz backoff was a candidate margin, not a universal value. Stop further pushing that boundary.
+4. Combine promising points and validate together. Their effects need not add: power sharing, P-state, memory latency and display traffic can change clocks and stability.
+5. Lower PL from the combination's measured demand, for example in supported 5 W steps. Measure hash, voltage when available, actual clocks and energy. A 10 W retreat from an unstable or materially slower point is a candidate to validate, not proof of a sweet spot.
+
+Choose memory-first or core-first based on algorithm sensitivity and the user's requested method. Use coarse probes before fine sweeps. Smaller steps are useful only if they change a measurable hardware state. A direct voltage/frequency curve needs its own supported interface and restore plan; an offset at fixed MHz is not an exact voltage setting.
+
+A PL below previously observed wattage can retain nearly the same hash, but measure it. The allowed minimum PL and actual consumption differ; locking frequency may keep consumption below that minimum limit. Do not invent a 250 W operating budget because an example uses it. Distinguish expected PL throttling from a failed setter: a ceiling may legitimately reduce actual clock. Declare accepted readback semantics before the sweep. The bundled runner's strict clock tolerance is not an adapter for every throttling experiment.
+
+## Algorithm and environment matrix
+
+Keep coin algorithm, miner/kernel version, GPU architecture, memory type/capacity, driver, display role and thermal policy together in each comparison. An ETH bandwidth optimization, RVN compute optimization, synthetic GEMM result or another miner's benchmark does not establish a PearlHash improvement.
+
+Low VRAM frequency may save energy in a compute-heavy miner yet interfere with rendering on a display card. Requested MHz, reported memory MHz and marketing effective data rate are different quantities. Probe supported states and actual behavior instead of assuming a universal multiplier.
+
+If fixed 80% fans were authorized for exploration, restore the agreed daily policy afterward. Validate the finalist again with AUTO fans: temperature-dependent Boost/voltage and shared dual-card cooling can change the operating point. Document core, hotspot and junction sensors separately; an absent sensor is not a safe reading.

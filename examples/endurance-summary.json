@@ -1,0 +1,69 @@
+{
+  "format": "public-evidence-capsule-v1",
+  "label": "conservative-recovery",
+  "evidence_scope": "endurance",
+  "power_scope": "gpu",
+  "power_method": "nvml-cumulative-energy",
+  "observed_seconds": 3592.9364857673645,
+  "nominal_seconds": 3600,
+  "input_declares_valid": true,
+  "graceful": true,
+  "restored": true,
+  "performance_comparison_valid": false,
+  "driver_event_count": 0,
+  "gpus": {
+    "gpu-1": {
+      "settings": {
+        "core_mhz": 1650,
+        "core_offset_mhz": 0,
+        "memory_mhz": 5001,
+        "memory_offset_mhz": 0,
+        "power_limit_w": 250
+      },
+      "hashrate_hs": 118362631578947.38,
+      "watts": 243.98778680953674,
+      "actual_core_mhz": 1569.8684210526317,
+      "actual_memory_mhz": 5001.0,
+      "power_method": "nvml-cumulative-energy",
+      "sampled_watts": 248.56459046454768,
+      "owner_accepted": 49,
+      "rate_windows": 38,
+      "native_auto_samples": 3508,
+      "all_auto": true,
+      "max_core_c": 73.96875,
+      "max_hotspot_c": 82.875,
+      "max_memory_junction_c": 74.0,
+      "hw": 0,
+      "pool_wait_observed": false
+    },
+    "gpu-2": {
+      "settings": {
+        "core_mhz": 2640,
+        "core_offset_mhz": 0,
+        "memory_mhz": 14801,
+        "memory_offset_mhz": 0,
+        "power_limit_w": 290
+      },
+      "hashrate_hs": 216921052631578.97,
+      "watts": 259.6888882267796,
+      "actual_core_mhz": 2632.0,
+      "actual_memory_mhz": 14801.0,
+      "power_method": "nvml-cumulative-energy",
+      "sampled_watts": 267.76432671149144,
+      "owner_accepted": 92,
+      "rate_windows": 38,
+      "native_auto_samples": 3508,
+      "all_auto": true,
+      "max_core_c": 67.91796875,
+      "max_hotspot_c": null,
+      "max_memory_junction_c": 60.0,
+      "hw": 0,
+      "pool_wait_observed": false
+    }
+  },
+  "limitations": [
+    "Input assertions are not an independent raw-log audit.",
+    "Anonymous capsule is not a deployment preset or analyzer input.",
+    "Review the exact output before publishing; raw private logs are omitted."
+  ]
+}

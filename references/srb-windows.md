@@ -59,3 +59,9 @@ For Windows System driver events, use an invariant UTC XPath/FilterXml time quer
 ## Validation limits
 
 The repository's deterministic tests and read-only hardware probe do not constitute a live mining test of every refactored code path, supported card or driver. The case study's historical real runs establish the method and measured local results. Calibrate the new adapter's short owned stop/restore path on the target system before a long plan. Other miners and OSes require their own parser, owner-pool identification and lifecycle/control adapter; the offline analyzer accepts normalized reports.
+
+## Advanced controller boundary
+
+The bundled preflight still uses a conservative all-GPU utilization/power readiness check. It can reject normal Windows desktop activity or work on another card. Its core-temperature-only check, lack of fan-policy control and strict clock tolerance do not implement the private daily controller. Diagnose with [Windows operations](windows-operations.md); use a calibrated adapter when these limitations matter. Do not silently raise an idle threshold, call unavailable sensors safe, or claim the packaged code passed the private controller's full deployment validation.
+
+Known temporary pool-capacity waits, finite reconnect grace, per-board sensors, AUTO fan restoration and RAM recycling require explicit state/lifecycle support. See [failure triage](failure-triage.md). These documentation methods are not automatic behavior of this basic runner.
